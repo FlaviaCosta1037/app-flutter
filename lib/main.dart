@@ -13,9 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       home: Scaffold(
-        extendBodyBehindAppBar: true,
         backgroundColor: Color.fromRGBO(244, 244, 244, 0.863),
         extendBody: true,
+        extendBodyBehindAppBar: true,
         appBar: AppBar(
           centerTitle: true,
           backgroundColor: Color.fromRGBO(204, 166, 28, 0.70),
@@ -57,25 +57,23 @@ class MyApp extends StatelessWidget {
 
         //Footer
         bottomNavigationBar: BottomAppBar(
+            color: Color.fromRGBO(204, 165, 28, 30),
             child: Container(
-          height: 49,
-          child: Row(children: [
-            Container(
-              width: 350,
-              height: 50,
-              color: Color.fromRGBO(204, 165, 28, 30),
-              child: const Text(
-                'Temperos do Sertão | 2023',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 12,
-                  fontStyle: FontStyle.italic,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            )
-          ]),
-        )),
+              alignment: Alignment.center,
+              height: 49,
+              child: Row(children: [
+                Container(
+                  child: const Text(
+                    '© 2023 - AuroraTech',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                )
+              ]),
+            )),
       ),
     );
   }
