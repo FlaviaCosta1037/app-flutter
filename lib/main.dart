@@ -12,16 +12,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Color.fromRGBO(244, 244, 244, 2),
         extendBody: true,
         extendBodyBehindAppBar: true,
         appBar: AppBar(
-          leading: Icon(
-            Icons.soup_kitchen_outlined,
-            size: 50,
-            color: Color.fromARGB(167, 12, 11, 30),
-          ),
+          leadingWidth: 70,
+          leading: Image.asset('assets/images/panelinha.png'),
           centerTitle: true,
           // leading: Image.asset('assets/images/icons8-panela-50.png'),
           backgroundColor: Color.fromRGBO(204, 166, 28, 0.70),
@@ -41,50 +39,52 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                IconButton(
-                    icon: Icon(Icons.edit_square,
-                        size: 60, color: Color.fromRGBO(204, 166, 28, 0.70)),
-                    onPressed: () {
-                      print("botão pressionado");
-                    }),
-                IconButton(
-                    icon: Icon(
-                      Icons.format_list_bulleted_outlined,
-                      color: Color.fromRGBO(204, 166, 28, 0.70),
-                      size: 60,
-                    ),
-                    onPressed: () {
-                      print("botão pressionado");
-                    }),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                IconButton(
-                    icon: Icon(Icons.person,
-                        size: 60, color: Color.fromRGBO(204, 166, 28, 0.70)),
-                    onPressed: () {
-                      print("botão pressionado");
-                    }),
-                IconButton(
-                    icon: Icon(
-                      Icons.restaurant_menu_rounded,
-                      color: Color.fromRGBO(204, 166, 28, 0.70),
-                      size: 60,
-                    ),
-                    onPressed: () {
-                      print("botão pressionado");
-                    }),
-              ],
-            ),
-          ],
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  IconButton(
+                      icon: Icon(Icons.edit_square,
+                          size: 60, color: Color.fromRGBO(204, 166, 28, 0.70)),
+                      onPressed: () {
+                        print("botão pressionado");
+                      }),
+                  IconButton(
+                      icon: Icon(
+                        Icons.format_list_bulleted_outlined,
+                        color: Color.fromRGBO(204, 166, 28, 0.70),
+                        size: 60,
+                      ),
+                      onPressed: () {
+                        print("botão pressionado");
+                      }),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  IconButton(
+                      icon: Icon(Icons.person,
+                          size: 60, color: Color.fromRGBO(204, 166, 28, 0.70)),
+                      onPressed: () {
+                        print("botão pressionado");
+                      }),
+                  IconButton(
+                      icon: Icon(
+                        Icons.restaurant_menu_rounded,
+                        color: Color.fromRGBO(204, 166, 28, 0.70),
+                        size: 60,
+                      ),
+                      onPressed: () {
+                        print("botão pressionado");
+                      }),
+                ],
+              ),
+            ],
+          ),
         ),
         //Footer
         bottomNavigationBar: BottomAppBar(
